@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Home from "./Home.jsx"
+import Languages from "./Languages.jsx"
 import Chinese from "./chinese/index.jsx";
 import English from "./english/index.jsx";
 import Korean from "./korean/index.jsx";
@@ -22,7 +22,7 @@ const App = () => {
         page === "english" ? <English setUserAnswer={setUserAnswer} /> : 
         page === "korean" ? <Korean setUserAnswer={setUserAnswer}/> :
         page === "japanese" ? <Japanese setUserAnswer={setUserAnswer}/> :
-        <Home handler = {handleNav}/>}
+        <Languages handler = {handleNav}/>}
    
     </div>
   );

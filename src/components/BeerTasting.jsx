@@ -1,47 +1,38 @@
 import React, {useState} from "react";
 
-const BeerTasting = ({setUserAnswer}) =>{
-    const [answer, setAnswer] = useState({a: "", b: "", c: "", d: "" });
-
-    const handleAnswer = (e) =>{
-        const {name, value} = event.target;
-        setAnswer((prev) =>({
-            ...prev, 
-            [name]: value,
-        }));
-    }
+const BeerTasting = ({userAnswerHandler, handler}) =>{
 
     const handleSubmit = () =>{
-        setUserAnswer(answer)
+        handler(true);
     }
     const english = ['DEFAULT','USA', 'KOREA', 'PHILLIPINES', 'THAILAND'];
     return(
         <>
-            <select name="a" id="choice-a" onChange={handleAnswer}>
+            <select name="a" id="choice-a" onChange={userAnswerHandler}>
                 {
-                    english.map((item) =>(
-                        <option value= {"a"}>{item}</option>
+                    english.map((item, index) =>(
+                        <option key ={index} value= {"a"}>{item}</option>
                     ))
                 }
             </select>
-            <select name="b" id="choice-b" onChange={handleAnswer}>
+            <select name="b" id="choice-b" onChange={userAnswerHandler}>
                 {
-                    english.map((item) =>(
-                        <option value= {"b"}>{item}</option>
+                    english.map((item, index) =>(
+                        <option key={index} value= {"b"}>{item}</option>
                     ))
                 }
             </select>
-            <select name="c" id="choice-c" onChange={handleAnswer}>
+            <select name="c" id="choice-c" onChange={userAnswerHandler}>
                 {
-                    english.map((item) =>(
-                        <option value= {"c"}>{item}</option>
+                    english.map((item, index) =>(
+                        <option key={index} value= {"c"}>{item}</option>
                     ))
                 }
             </select>
-            <select name="d" id="choice-d" onChange={handleAnswer}>
+            <select name="d" id="choice-d" onChange={userAnswerHandler}>
                 {
-                    english.map((item) =>(
-                        <option value= {"d"}>{item}</option>
+                    english.map((item, index) =>(
+                        <option key={index} value= {"d"}>{item}</option>
                     ))
                 }
             </select>
