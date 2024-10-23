@@ -6,6 +6,7 @@ import Korean from "./korean/index.jsx";
 import Japanese from "./japanese/index.jsx";
 
 const App = () => {
+  const [userAnswer, setUserAnswer] = useState();
   const [page, setPage] = useState("home");
 
   const handleNav = (e) =>{
@@ -17,10 +18,10 @@ const App = () => {
   return (
     <div className="game-container-root">
       {
-        page === "chinese" ? <Chinese  /> :
-        page === "english" ? <English  /> : 
-        page === "korean" ? <Korean /> :
-        page === "japanese" ? <Japanese /> :
+        page === "chinese" ? <Chinese setUserAnswer={setUserAnswer} /> :
+        page === "english" ? <English setUserAnswer={setUserAnswer} /> : 
+        page === "korean" ? <Korean setUserAnswer={setUserAnswer}/> :
+        page === "japanese" ? <Japanese setUserAnswer={setUserAnswer}/> :
         <Home handler = {handleNav}/>}
    
     </div>
