@@ -10,6 +10,7 @@ $font-primary-color: #fff;
 $heading-large: 3rem;
 $heading-medium: 1.5rem;
 $heading-small: 1rem;
+$font-dark: rgb(10, 10, 10);
 
 $spacing-large: 3rem;
 $spacing-medium: 1.5rem;
@@ -43,6 +44,7 @@ li{
 select{
     padding: $spacing-small $spacing-medium;
     font-size: $heading-small;
+    color: $font-dark;
 }
 
 button{
@@ -104,10 +106,11 @@ button.submit{
 }
 .two-columns{
     display: grid;
-    grid-template-columns: $spacing-small 1fr;
+    grid-template-columns: 40px 1fr;
     gap: $spacing-small;
     justify-content: center;
     align-items: center;
+    padding: 0 12px;
     p{
         font-size: $heading-medium
     }
