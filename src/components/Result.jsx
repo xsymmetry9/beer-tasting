@@ -3,6 +3,10 @@ import React from "react";
 const Result = ({ language, userAnswer }) => {
     const correctAnswers = { a: "usa", b: "phillipines", c: "korea", d: "thailand" };
 
+    //Not using route, if using route, delete this code.
+    const handleRefresh = () =>{
+        window.location.reload();
+    }
     const perfectScoreMessage = {
         "english": "You got all right!",
         "chinese": "你全答對了！",
@@ -35,7 +39,7 @@ const Result = ({ language, userAnswer }) => {
                 : <p className="score-title">{showScoreMessage[language.toLowerCase()]}</p>
             }
             <div className="container">
-                <a className = "btn-home" href="/">HOME</a>
+                <button onClick={handleRefresh}>Go back</button>
             </div>
         </>
     );

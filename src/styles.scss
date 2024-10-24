@@ -56,7 +56,11 @@ select{
     -webkit-appearance: none; /* Remove default styling for Safari */
     -moz-appearance: none; /* Remove default styling for Firefox */
     appearance: none; /* Remove default styling for modern browsers */
-    // background-image: url('../assets/resource/down-arrow.svg'); 
+    cursor: pointer;
+    background: white url("./assets/resource/arrow-down-sign-to-navigate.png");
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: right $spacing-small center; // Adjust position as needed
     padding: $spacing-small $spacing-medium;
     font-size: $heading-small;
     color: $font-dark;
