@@ -1,43 +1,77 @@
 import React, {useState} from "react";
 
-const BeerTasting = ({userAnswerHandler, handler}) =>{
+const BeerTasting = ({language, userAnswerHandler, handler}) =>{
 
     const handleSubmit = () =>{
         handler(true);
     }
-    const english = ['DEFAULT','USA', 'KOREA', 'PHILLIPINES', 'THAILAND'];
+    const arr = () =>{
+        const english = ['...','USA', 'KOREA', 'PHILLIPINES', 'THAILAND'];
+        const chinese = ['...', '美國', '韓國', '菲律賓', '泰國'];
+        const korean = ['...', '미국', '한국', '필리핀', '태국'];
+        const japanese = ['...', 'アメリカ', '韓国', 'フィリピン', 'タイ'];
+    
+        switch(language)
+        {
+            case "english": 
+                return english;
+            case "chinese":
+                return chinese;
+            case "korean":
+                return korean;
+            case "japanese": 
+                return japanese;
+            default: english; // Default to english if no matching language is found
+        }
+    }
+
+    const getArray = arr();
+
     return(
-        <>
+        <div className="choices-container">
+        <div className="two-columns">
+            <p>1.</p>
             <select name="a" id="choice-a" onChange={userAnswerHandler}>
+                    {
+                        getArray.map((item, index) =>(
+                            <option key ={index} value= {item}>{item}</option>
+                        ))
+                    }
+            </select>
+
+        </div>
+
+        <div className="two-columns">
+            <p>2.</p>
+        <select name="b" id="choice-b" onChange={userAnswerHandler}>
                 {
-                    english.map((item, index) =>(
-                        <option key ={index} value= {"a"}>{item}</option>
+                    getArray.map((item, index) =>(
+                        <option key={index} value= {item}>{item}</option>
                     ))
                 }
             </select>
-            <select name="b" id="choice-b" onChange={userAnswerHandler}>
-                {
-                    english.map((item, index) =>(
-                        <option key={index} value= {"b"}>{item}</option>
-                    ))
-                }
-            </select>
+        </div>
+        <div className="two-columns">
+            <p>3.</p>
             <select name="c" id="choice-c" onChange={userAnswerHandler}>
                 {
-                    english.map((item, index) =>(
-                        <option key={index} value= {"c"}>{item}</option>
+                    getArray.map((item, index) =>(
+                        <option key={index} value= {item}>{item}</option>
                     ))
                 }
-            </select>
+            </select></div>
+        <div className="two-columns">
+            <p>4. </p>
             <select name="d" id="choice-d" onChange={userAnswerHandler}>
                 {
-                    english.map((item, index) =>(
-                        <option key={index} value= {"d"}>{item}</option>
+                    getArray.map((item, index) =>(
+                        <option key={index} value= {item}>{item}</option>
                     ))
                 }
             </select>
-            <button onClick={handleSubmit}>Submit</button>
-        </>
+        </div>
+            <button className="submit" onClick={handleSubmit}>Submit</button>
+        </div>
     )
 
 }

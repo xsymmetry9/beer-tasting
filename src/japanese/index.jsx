@@ -1,8 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
+import BeerTasting from "../components/BeerTasting.jsx"
+import Result from "../components/Result.jsx";
+
 const Game = () =>{
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [userAnswer, setUserAnswer] = useState({a: "", b: "", c: "", d: "" });
+
+    const handleAnswer = (e) =>{
+        const {name, value} = e.target;
+        setUserAnswer((prev) =>({
+            ...prev, 
+            [name]: value,
+        }));
+    }
     return(
         <>
-            <h1>This is Japanese</h1>
+            {isSubmitted ? <Result userAnswer = {userAnswer} language={"japanese"}/> : <BeerTasting language={"japanese"} userAnswerHandler = {handleAnswer} handler = {setIsSubmitted} />}
         </>
     )
 }

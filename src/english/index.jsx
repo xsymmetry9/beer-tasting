@@ -7,7 +7,7 @@ const Game = () =>{
     const [userAnswer, setUserAnswer] = useState({a: "", b: "", c: "", d: "" });
 
     const handleAnswer = (e) =>{
-        const {name, value} = event.target;
+        const {name, value} = e.target;
         setUserAnswer((prev) =>({
             ...prev, 
             [name]: value,
@@ -15,7 +15,7 @@ const Game = () =>{
     }
     return(
         <>
-            {isSubmitted ? <Result userAnswer = {userAnswer}/> : <BeerTasting userAnswerHandler = {handleAnswer} handler = {setIsSubmitted} />}
+            {isSubmitted ? <Result userAnswer = {userAnswer} language={"english"}/> : <BeerTasting language={"english"} userAnswerHandler = {handleAnswer} handler = {setIsSubmitted} />}
         </>
     )
 }

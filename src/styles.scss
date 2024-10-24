@@ -13,11 +13,17 @@ $spacing-medium: 1.5rem;
 $spacing-small: 1rem;
 $spacing-extra-small: .8rem;
 
+$primary-color: rgb(250, 160, 0);
+
 body{
     width: 100%;
     height: 70vh;
-    background-color: rgb(0, 0, 0);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+     url("https://media.altphotos.com/cache/images/2017/10/05/08/752/flatlay-pumpkin-black.jpg");
+    background-size: cover;
+    background-position: center;
     color: $font-primary-color;
+
 }
 
 h1{
@@ -29,6 +35,30 @@ ul{
 }
 li{
     width: 400px;
+}
+
+select{
+    padding: $spacing-small $spacing-medium;
+    font-size: $heading-medium;
+}
+
+button{
+    cursor: pointer;
+    font-size: $heading-medium;
+    padding: $spacing-small $spacing-medium;
+    border-radius: 10px;
+    border: none;
+}
+
+button.submit{
+    background-color: $primary-color;
+    color: $font-primary-color;
+    width: 200px;
+    justify-self: center;
+    margin-top: $spacing-medium;
+    &:hover, &focuse{
+        background-color:rgba(250, 160, 0, 0.5);
+    }
 }
 .game-container-root{
     width: 100%;
@@ -54,4 +84,34 @@ li{
     &:hover, &:focus{
         background-color: rgb(180, 180, 188);
     }
+}
+
+
+.choices-container{
+    border: 1px solid red;
+    max-width: 400px;
+    width: 100%;
+    padding: $spacing-medium;
+    display: grid;
+    gap: 10px;
+
+
+}
+.two-columns{
+    display: grid;
+    grid-template-columns: $spacing-small 1fr;
+    gap: $spacing-small;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-size: $heading-medium
+    }
+}
+
+.score-title{
+    font-size: $heading-medium;
+}
+
+.display-moving-message{
+    padding-bottom: $spacing-medium;
 }
