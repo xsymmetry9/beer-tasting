@@ -83,10 +83,12 @@ button.submit{
 .nav-languages{
     cursor: pointer;
     font-size: $heading-small;
+    color: $font-dark;
     border-radius: 10px;
     border: none;
     border-bottom: 1px solid gray;
-    width: 100%;
+    width: 90%;
+    margin-inline: auto;
     padding: $spacing-small $spacing-medium;
     &:hover, &:focus{
         background-color: rgb(180, 180, 188);
