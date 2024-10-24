@@ -30,7 +30,7 @@ const BeerTasting = ({language, userAnswerHandler, handler}) =>{
     return(
         <div className="choices-container">
         <div className="two-columns">
-            <p>1.</p>
+            <p className="counter-number">1.</p>
             <select name="a" id="choice-a" onChange={userAnswerHandler}>
                     {
                         getArray.map((item, index) =>(
@@ -42,7 +42,7 @@ const BeerTasting = ({language, userAnswerHandler, handler}) =>{
         </div>
 
         <div className="two-columns">
-            <p>2.</p>
+            <p className="counter-number">2.</p>
         <select name="b" id="choice-b" onChange={userAnswerHandler}>
                 {
                     getArray.map((item, index) =>(
@@ -52,7 +52,7 @@ const BeerTasting = ({language, userAnswerHandler, handler}) =>{
             </select>
         </div>
         <div className="two-columns">
-            <p>3.</p>
+            <p className="counter-number">3.</p>
             <select name="c" id="choice-c" onChange={userAnswerHandler}>
                 {
                     getArray.map((item, index) =>(
@@ -61,7 +61,7 @@ const BeerTasting = ({language, userAnswerHandler, handler}) =>{
                 }
             </select></div>
         <div className="two-columns">
-            <p>4. </p>
+            <p className="counter-number">4. </p>
             <select name="d" id="choice-d" onChange={userAnswerHandler}>
                 {
                     getArray.map((item, index) =>(

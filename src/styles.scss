@@ -79,7 +79,6 @@ button.submit{
 }
 .nav-languages-container{
     padding: 0 $heading-medium;
-    border: 1px solid white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,4 +135,8 @@ button.submit{
 
 .heading-title{
     text-align: center;
+}
+
+.counter-number{
+    margin-left: $spacing-small;
 }
