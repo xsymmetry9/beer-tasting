@@ -34,6 +34,9 @@ const Result = ({ language, userAnswer }) => {
                 ? <p className="score-title">{perfectScoreMessage[language.toLowerCase()]}</p> 
                 : <p className="score-title">{showScoreMessage[language.toLowerCase()]}</p>
             }
+            <div className="container">
+                <a className = "btn-home" href="/">HOME</a>
+            </div>
         </>
     );
 };

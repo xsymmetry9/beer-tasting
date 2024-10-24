@@ -18,6 +18,8 @@ $spacing-small: 1rem;
 $spacing-extra-small: .8rem;
 
 $primary-color: rgb(250, 160, 0);
+$primary-bg-color: #fff;
+$secondary-bg-color: rgb(10, 10, 10);
 
 body{
     width: 100%;
@@ -27,7 +29,7 @@ body{
     background-size: cover;
     background-position: center;
     color: $font-primary-color;
-
+    
 }
 
 h1{
@@ -40,11 +42,27 @@ ul{
 li{
     width: 400px;
 }
+a{
+    cursor: pointer;
+    color: $font-primary-color;
+    text-decoration: none;
+    &:hover, &:focus{
+        color: $primary-color;
+        text-decoration-line: underline;
+    }
+}
 
 select{
+    -webkit-appearance: none; /* Remove default styling for Safari */
+    -moz-appearance: none; /* Remove default styling for Firefox */
+    appearance: none; /* Remove default styling for modern browsers */
+    // background-image: url('../assets/resource/down-arrow.svg'); 
     padding: $spacing-small $spacing-medium;
     font-size: $heading-small;
     color: $font-dark;
+     &:focus, &:hover{
+        border: 3px solid $primary-color;
+     }
 }
 
 button{
@@ -139,4 +157,8 @@ button.submit{
 
 .counter-number{
     margin-left: $spacing-small;
+}
+
+.container{
+    padding: $spacing-medium;
 }
