@@ -9,7 +9,9 @@
 body {
   width: 100%;
   height: 70vh;
-  background-color: rgb(0, 0, 0);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://media.altphotos.com/cache/images/2017/10/05/08/752/flatlay-pumpkin-black.jpg");
+  background-size: cover;
+  background-position: center;
   color: #fff;
 }
 
@@ -23,6 +25,30 @@ ul {
 
 li {
   width: 400px;
+}
+
+select {
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+}
+
+button.submit {
+  background-color: rgb(250, 160, 0);
+  color: #fff;
+  width: 200px;
+  justify-self: center;
+  margin-top: 1.5rem;
+}
+button.submit:hover, button.submitfocuse {
+  background-color: rgba(250, 160, 0, 0.5);
 }
 
 .game-container-root {
@@ -49,4 +75,32 @@ li {
   background-color: rgb(180, 180, 188);
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBQUE7RUFDSTtFQUNBO0FBQ0o7O0FBWUE7RUFDSTtFQUNBO0VBQ0E7RUFDQSxXQWRpQjtBQUtyQjs7QUFZQTtFQUNJLGVBakJZO0FBUWhCOztBQVlBO0VBQ0k7QUFUSjs7QUFXQTtFQUNJO0FBUko7O0FBVUE7RUFDSTtFQUNBO0VBQ0E7RUFDQTtFQUVBO0VBQ0E7RUFDQTtFQUNBO0FBUko7O0FBWUE7RUFDSTtFQUNBLGlCQXhDYTtFQXlDYjtFQUNBO0VBQ0E7RUFDQTtFQUNBO0FBVEo7QUFVSTtFQUNJO0FBUlIsQyIsInNvdXJjZXMiOlsid2VicGFjazovL2JlZXItdGFzdGluZy8uL3NyYy9zdHlsZXMuc2NzcyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==*/
+.choices-container {
+  border: 1px solid red;
+  max-width: 400px;
+  width: 100%;
+  padding: 1.5rem;
+  display: grid;
+  gap: 10px;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.two-columns p {
+  font-size: 1.5rem;
+}
+
+.score-title {
+  font-size: 1.5rem;
+}
+
+.display-moving-message {
+  padding-bottom: 1.5rem;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBQUE7RUFDSTtFQUNBO0FBQ0o7O0FBY0E7RUFDSTtFQUNBO0VBQ0E7RUFFQTtFQUNBO0VBQ0EsV0FuQmlCO0FBT3JCOztBQWdCQTtFQUNJLGVBdkJZO0FBVWhCOztBQWdCQTtFQUNJO0FBYko7O0FBZUE7RUFDSTtBQVpKOztBQWVBO0VBQ0k7RUFDQSxpQkFsQ2E7QUFzQmpCOztBQWVBO0VBQ0k7RUFDQSxpQkF2Q2E7RUF3Q2I7RUFDQTtFQUNBO0FBWko7O0FBZUE7RUFDSSxrQ0F0Q1k7RUF1Q1osV0FqRGlCO0VBa0RqQjtFQUNBO0VBQ0Esa0JBOUNhO0FBa0NqQjtBQWFJO0VBQ0k7QUFYUjs7QUFjQTtFQUNJO0VBQ0E7RUFDQTtFQUNBO0VBRUE7RUFDQTtFQUNBO0VBQ0E7QUFaSjs7QUFnQkE7RUFDSTtFQUNBLGlCQXRFYTtFQXVFYjtFQUNBO0VBQ0E7RUFDQTtFQUNBO0FBYko7QUFjSTtFQUNJO0FBWlI7O0FBaUJBO0VBQ0k7RUFDQTtFQUNBO0VBQ0EsZUFsRmE7RUFtRmI7RUFDQTtBQWRKOztBQWtCQTtFQUNJO0VBQ0E7RUFDQSxTQTFGWTtFQTJGWjtFQUNBO0FBZko7QUFnQkk7RUFDSSxpQkFuR1M7QUFxRmpCOztBQWtCQTtFQUNJLGlCQXhHYTtBQXlGakI7O0FBa0JBO0VBQ0ksc0JBeEdhO0FBeUZqQixDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vYmVlci10YXN0aW5nLy4vc3JjL3N0eWxlcy5zY3NzIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9*/
