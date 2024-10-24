@@ -21,7 +21,7 @@ const Home = ({ handler }) => {
     return (
         <>
             <div className="display-moving-message">
-                <h1>{messages[currentMessageIndex]}</h1>
+                <h1 class="heading-title">{messages[currentMessageIndex]}</h1>
             </div>
             <ul id="nav-languages">
                 <li><button className="nav-languages" onClick={handler} value="chinese">中文</button></li>

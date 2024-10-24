@@ -70,7 +70,7 @@ const BeerTasting = ({language, userAnswerHandler, handler}) =>{
                 }
             </select>
         </div>
-            <button className="submit" onClick={handleSubmit}>Submit</button>
+            <button className="submit" onClick={handleSubmit}>Done</button>
         </div>
     )
 
