@@ -75,7 +75,9 @@ button.submit{
     align-items: center;
 
 }
-
+.nav-languages-container{
+    padding: 0 $heading-small;
+}
 .nav-languages{
     cursor: pointer;
     font-size: $heading-small;
